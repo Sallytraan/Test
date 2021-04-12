@@ -1,0 +1,113 @@
+:root {
+    --szSymbol: 150px;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: "oswald";
+}
+
+#controls button {
+    position: absolute;
+    height: 7vh;
+    width: 20vw;
+    opacity: .6;
+    border: 1px solid black;
+    font-family: "oswald";
+    font-size: 15px;
+}
+
+#controls button:hover { cursor: pointer; }
+
+#bigger, #stop, #smaller { top: 1vh; }
+#smaller { right: 1vw; }
+#bigger { left: 1vw;}
+#stop {left: calc(100vw - 60vw);}
+
+#playground {
+    position: relative;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box1, #box1 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition-property: width, height, background-color;
+    transition-duration: 10s, 10s, .5s;
+}
+
+/* Symbolen */
+
+#box1 {
+    height: var(--szSymbol);
+    width: var(--szSymbol);
+}
+
+#box2 {
+    height: calc(var(--szSymbol) - 10px);
+    width: calc(var(--szSymbol) - 10px);
+}
+
+#box3 {
+    height: calc(var(--szSymbol) - 20px);
+    width: calc(var(--szSymbol) - 20px);
+}
+
+#box4 {
+    height: var(--szSymbol);
+    width: var(--szSymbol);
+    
+    transform: rotate(45deg);
+}
+
+#box5 {
+    border-radius: 50%;
+    height: var(--szSymbol);
+    width: var(--szSymbol);
+}
+
+/* Färgscheman */
+
+#colorBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    height: 20%;
+}
+
+#colorBox > div {
+    height: 18vh;
+    width: 24vw;
+    border: 1px solid black;
+    margin: 10px 5px;
+
+    display: flex;
+    flex-direction: row;
+} 
+
+#colorBox > div:hover {
+    box-shadow: 0px 0px 5px 0px rgb(87, 87, 87);
+}
+
+#colorBox > div > div {
+    width: 20%;
+}
+
+.ord {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+}
+
+.selected {
+    box-shadow: 0px 0px 15px 0px rgb(87, 87, 87);
+}

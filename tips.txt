@@ -1,0 +1,32 @@
+
+
+Markering av aktivt färgschema
+
+    Ett bra sätt (det bästa jag kan komma på nu) för att markera vilket färgschema
+    som är aktivt är att ge den en viss CSS-klass. Det är lätt att fixa när 
+    man klickar på det.
+
+    Man måste dock inte glömma att det gamla schemat ska avmarkeras, så att det är
+    bara ett schema som är markerat som aktivt.
+
+    Man kan hitta det gamla temat som var markerat (så att man kan avmarkera det) 
+    genom att köra en querySelector(".selected"), om ni nu använder "selected" som
+    namn på klassen som markerar schemat.
+
+    PROBLEMET
+    ...är att första gången man markerar ett schema (vilket görs automatiskt från
+    koden) så finns det inget "gammlat" schema, alltså kommer
+    document.querySelector(".selected")
+    att vara null, och det kommer att ge ett error.
+    Vi har inte sett ännu i kursen hur man kan lösa det så jag har därför skapat en
+    funktion som hjälper er med det.
+    
+    TIPSET
+    ...är att ni ska använda funktionen removeClassFromElement() för att ta bort
+    klassen "selected" från det gamla schemat. Anropa den så här:
+    removeClassFromElement(document.querySelector(".selected"), "selected");
+    Funktionen tar hand om problemet när det inte finns något element som har 
+    klassen "selected"
+
+    
+    

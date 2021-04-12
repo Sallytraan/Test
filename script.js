@@ -81,3 +81,5 @@ document.querySelector("#colorBox > div").nextSibling.nextSibling.nextSibling.cl
 for (let i = 1; i <= 5; i++) {
     document.querySelector(`#box${i}`).style.backgroundColor = getColor(1, i);
 };
+
+// detta är uppgift 1
